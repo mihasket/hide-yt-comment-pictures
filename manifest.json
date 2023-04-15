@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Hide Youtube Comments Profile Pictures",
+    "version": "1.0",
+  
+    "description": "Hides profile pictures of users in the comment section",
+  
+    "icons": {
+      "48": "icons/block.png"
+    },
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "exstension@mihasket.github.com",
+        "strict_min_version": "42.0"
+      }
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/watch?v=*"],
+        "js": ["main.js"]
+      }
+    ]
+  }
